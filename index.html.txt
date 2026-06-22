@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixeldreams | Fotografia di Paesaggio e Natura</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font moderno ed elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigazione minimale -->
+    <header>
+        <div class="logo">Pixel<span>dreams</span></div>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#vision">La Visione</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Copertina Impatto (Hero) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Oltre la luce.</h1>
+            <p>La natura selvaggia catturata nel suo momento più intimo.</p>
+            <a href="#portfolio" class="btn-cta">Esplora le Gallerie</a>
+        </div>
+    </section>
+
+    <!-- Galleria Portfolio -->
+    <section id="portfolio" class="gallery-section">
+        <div class="section-header">
+            <h2>Scatti Scelti</h2>
+            <p>Una selezione di paesaggi incontaminati e dettagli naturali</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <!-- NOTA: Sostituisci questi link di esempio con le TUE foto quando caricherai il sito -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1000" alt="Montagna">
+                <div class="overlay"><div class="text">Luce d'Inverno</div></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1000" alt="Nebbia">
+                <div class="overlay"><div class="text">Il Silenzio dei Boschi</div></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1000" alt="Foresta">
+                <div class="overlay"><div class="text">Raggi di Vita</div></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1000" alt="Cascata">
+                <div class="overlay"><div class="text">Forza Fluida</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Filosofia / Chi Sono -->
+    <section id="vision" class="vision-section">
+        <div class="vision-content">
+            <h2>La Filosofia Pixeldreams</h2>
+            <p>Fotografare la natura non significa solo premere un pulsante. Significa saper attendere ore nel freddo, rispettare gli habitat protetti e catturare quel singolo istante in cui la terra racconta la sua storia. Ogni pixel è un sogno di conservazione e meraviglia.</p>
+        </div>
+    </section>
+
+    <!-- Footer e Contatti -->
+    <footer id="contatti">
+        <div class="footer-container">
+            <h3>Iniziamo un viaggio insieme</h3>
+            <p>Sei interessato a stampe d'arte, progetti o collaborazioni editoriali?</p>
+            <a href="mailto:info@pixeldreams.com" class="email-link">info@pixeldreams.com</a>
+            <div class="copyright">
+                <p>&copy; 2026 Pixeldreams. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
