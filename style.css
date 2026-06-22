@@ -44,7 +44,7 @@ header .logo {
 }
 
 header .logo span {
-    color: var(--accent);
+    color: red;
     font-weight: 300;
 }
 
