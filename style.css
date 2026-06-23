@@ -94,7 +94,7 @@ header nav ul li a:hover {
     font-style: italic; /* Forza il corsivo */
     font-size: 3.5rem;
     font-weight: normal !important;
-    letter-spacing: 0px;
+    letter-spacing: 10px;
     margin-bottom: 15px;
 }
 
