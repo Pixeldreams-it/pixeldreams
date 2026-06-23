@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Lyon Corsivo';
+    src: url('Lyon-Italic.ttf') format('truetype'); /* Sostituisci 'Lyon-Italic.ttf' con il nome esatto del tuo file, attento se finisce in .ttf o .otf */
+    font-style: italic;
+    font-weight: normal;
+}
+
 /* Reset e Variabili per il Tema Scuro */
 * {
     margin: 0;
