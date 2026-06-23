@@ -261,3 +261,7 @@ footer p {
     .hero h1 { font-size: 2.3rem; }
     .gallery-grid { grid-template-columns: 1fr; }
 }
+
+.hero p, .hero h2, .hero-subtitle {
+    font-family: 'Lyon', serif !important;
+}
