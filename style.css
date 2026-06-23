@@ -71,9 +71,10 @@ header nav ul li a:hover {
 
 /* Hero Section (Copertina) */
 .hero {
-    background: url('AF7 copia.jpg') center;
-    background-size: 120% auto;
-    background-repeat: no-repeat; /* Evita che l'immagine si ripeta ai lati */
+    background: url('AF7 copia.jpg') center top; /* IMPORTANTE: "top" blocca la parte alta dell'immagine */
+    background-size: 130% auto; /* Sostituisce "contain". Ingrandisce l'immagine (puoi cambiare 130% in 120% o 140% a piacimento) */
+    background-repeat: no-repeat;
+    background-color: #000; /* Mantiene lo sfondo nero per le parti che rimangono vuote sotto */
     height: 85vh;
     display: flex;
     justify-content: center;
