@@ -265,11 +265,3 @@ footer p {
 .hero p, .hero h2, .hero-subtitle {
     font-family: 'Lyon', serif !important;
 }
-
-.portfolio-section h2, 
-.gallery-section h2, 
-section h2, 
-.luce-d-inverno h2 {
-    border-color: #e63946 !important;     /* Se la riga è un bordo inferiore */
-    background-color: #e63946 !important; /* Se la riga è una linea separatrice indipendente */
-}
