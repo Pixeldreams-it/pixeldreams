@@ -72,7 +72,7 @@ header nav ul li a:hover {
 /* Hero Section (Copertina) */
 .hero {
     background: url('AF7 copia.jpg') center center;
-    baxkground-size: contain
+    baxkground-size: cover;
     height: 85vh;
     display: flex;
     justify-content: center;
