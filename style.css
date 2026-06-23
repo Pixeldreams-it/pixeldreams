@@ -265,3 +265,7 @@ footer p {
 .hero p, .hero h2, .hero-subtitle {
     font-family: 'Lyon', serif !important;
 }
+
+header nav a, header ul li a {
+    font-family: 'Lyon', serif !important;
+}
