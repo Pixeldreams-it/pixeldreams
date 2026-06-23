@@ -90,9 +90,11 @@ header nav ul li a:hover {
 }
 
 .hero h1 {
+    font-family: 'Lyon Corsivo', Georgia, serif; /* Usa il font caricato e imposta Georgia come rimpiazzo di sicurezza */
+    font-style: italic; /* Forza il corsivo */
     font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -1px;
+    font-weight: 400;
+    letter-spacing: 0px;
     margin-bottom: 15px;
 }
 
