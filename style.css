@@ -93,7 +93,7 @@ header nav ul li a:hover {
     font-family: 'Lyon Corsivo', Georgia, serif; /* Usa il font caricato e imposta Georgia come rimpiazzo di sicurezza */
     font-style: italic; /* Forza il corsivo */
     font-size: 3.5rem;
-    font-weight: 400;
+    font-weight: normal !important;
     letter-spacing: 0px;
     margin-bottom: 15px;
 }
