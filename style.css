@@ -404,3 +404,46 @@ section:last-of-type *,
 .slogan {
     font-family: 'Lyon', serif !important;
 }
+
+/* ==========================================
+   RIDUZIONE TESTI PER SMARTPHONE (MAX 480PX)
+   ========================================== */
+@media (max-width: 480px) {
+    
+    /* Il titolo principale (es. "Pixel dreams" o il titolo della Home) */
+    .hero h1, 
+    #hero h1,
+    .hero-content h1 {
+        font-size: 2rem !important; /* Ridotto per farlo stare in una riga sola */
+        line-height: 1.2 !important;
+    }
+
+    /* Il sottotitolo o i paragrafi dentro la sezione iniziale */
+    .hero p, 
+    #hero p,
+    .hero-content p {
+        font-size: 1rem !important; /* Testo leggibile ma compatto */
+        line-height: 1.4 !important;
+    }
+
+    /* La scritta "Through the lens" che abbiamo modificato prima */
+    .vision-section h2,
+    #vision h2 {
+        font-size: 1.8rem !important; /* Evita che il titolo della filosofia sia gigante */
+        text-align: center !important;
+    }
+
+    /* Il testo lungo della filosofia ("Fotografare la natura non significa...") */
+    .vision-content p,
+    #vision p {
+        font-size: 0.95rem !important; /* Dimensione perfetta per i paragrafi da telefono */
+        line-height: 1.6 !important;   /* Dà aria alle righe così si legge bene */
+        padding: 0 10px !important;    /* Evita che il testo tocchi i bordi dello schermo */
+    }
+
+    /* Il titolo "Galleries" */
+    #portfolio h2,
+    .gallery-section h2 {
+        font-size: 1.8rem !important;
+    }
+}
