@@ -347,3 +347,32 @@ main h2,
         background-position: center center !important; /* Centra l'inquadratura della foto */
     }
 }
+
+/* Regolazione specifica per Smartphone (fino a 480px) */
+@media (max-width: 480px) {
+    .hero, 
+    #hero, 
+    .hero-section {
+        /* 1. RESET TOTALE DELL'ALTEZZA */
+        height: auto !important;          /* Lascia che il contenuto decida l'altezza */
+        min-height: 0 !important;         /* Rimuove vincoli minimi */
+        padding-top: 56.25% !important;   /* Trucco CSS: Crea un'area con proporzioni 16:9 (o 66.6% per 3:2) */
+        
+        /* 2. RESET STILI SFONDO */
+        background-attachment: scroll !important; /* Obbligatorio su mobile */
+        background-size: cover !important;        /* Riempie l'area senza deformare */
+        background-position: center center !important; /* Centra il soggetto della foto */
+    }
+
+    /* 3. SISTEMIAMO IL CONTENUTO SOPRA L'IMMAGINE */
+    .hero-content, 
+    .hero .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; /* Occupa quasi tutta la larghezza */
+        text-align: center;
+        padding: 0 !important;
+    }
+}
