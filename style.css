@@ -376,3 +376,18 @@ main h2,
         padding: 0 !important;
     }
 }
+
+a[href^="mailto:info@studiofilipponi.com"],
+a[href="mailto:info@studiofilipponi.com"],
+.contact-section a,
+footer a {
+    color: #ffffff !important;      /* Forza il colore bianco */
+    font-weight: normal !important;  /* Rimuove il grassetto */
+    text-decoration: none;           /* Opzionale: rimuove la sottolineatura se presente */
+}
+
+/* Mantiene il colore bianco anche quando ci passi sopra con il mouse */
+a[href^="mailto:info@studiofilipponi.com"]:hover {
+    color: #ffffff !important;
+    opacity: 0.8;                    /* Opzionale: una leggera trasparenza quando ci passi sopra */
+}
