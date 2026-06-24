@@ -392,10 +392,15 @@ a[href^="mailto:info@studiofilipponi.com"]:hover {
     opacity: 0.8;                    /* Opzionale: una leggera trasparenza quando ci passi sopra */
 }
 
-/* Metodo totale per forzare il font Lyon sulla scritta in fondo alla pagina */
-footer *, 
-.footer *, 
-.contact-section *,
-[class*="footer"] * {
+/* 1. Cerca qualsiasi elemento di testo nella pagina e applica il font Lyon */
+h1, h2, h3, h4, h5, h6, p, span, div {
+    font-family: 'Lyon', serif !important;
+}
+
+/* 2. Target specifico per le ultime sezioni della pagina */
+section:last-of-type, 
+section:last-of-type *,
+.brand-slogan,
+.slogan {
     font-family: 'Lyon', serif !important;
 }
