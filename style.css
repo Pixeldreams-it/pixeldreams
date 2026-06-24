@@ -272,6 +272,6 @@ footer p {
 .hero-content a {
     font-family: 'Lyon', serif !important;
     text-transform: none; /* Opzionale: toglilo se vuoi evitare che sia tutto in MAIUSCOLO */
-    font-size: 1.1rem !important; /* Aumenta leggermente la grandezza (es. da 1rem a 1.1rem) */
+    font-size: 1.2rem !important; /* Aumenta leggermente la grandezza (es. da 1rem a 1.1rem) */
     padding: 12px 30px !important; /* Opzionale: allarga leggermente l'ovale per contenere meglio il testo */
 }
