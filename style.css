@@ -265,3 +265,11 @@ footer p {
 .hero p, .hero h2, .hero-subtitle {
     font-family: 'Lyon', serif !important;
 }
+
+.hero .btn, 
+.hero a, 
+.hero button,
+.hero-content a {
+    font-family: 'Lyon', serif !important;
+    text-transform: none; /* Opzionale: toglilo se vuoi evitare che sia tutto in MAIUSCOLO */
+}
