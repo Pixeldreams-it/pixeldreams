@@ -392,13 +392,10 @@ a[href^="mailto:info@studiofilipponi.com"]:hover {
     opacity: 0.8;                    /* Opzionale: una leggera trasparenza quando ci passi sopra */
 }
 
-/* Applica il font Lyon alla scritta Through The Lens in fondo alla pagina */
-footer h3,
-footer p,
-.footer-section h3,
-.contact-section h3,
-.brand-slogan {
+/* Metodo totale per forzare il font Lyon sulla scritta in fondo alla pagina */
+footer *, 
+.footer *, 
+.contact-section *,
+[class*="footer"] * {
     font-family: 'Lyon', serif !important;
-    font-weight: 300 !important; /* Mantiene lo stile leggero ed elegante */
-    letter-spacing: 1px;         /* Distanzia leggermente le lettere */
 }
