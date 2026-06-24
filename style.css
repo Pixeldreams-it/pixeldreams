@@ -282,3 +282,56 @@ main h2,
 .portfolio h2 {
     font-family: 'Lyon', serif !important;
 }
+
+/* ==========================================
+   STILI ADAPTIVE PER SMARTPHONE E TABLET 
+   ========================================== */
+
+/* 1. Regolazioni per Tablet (schermi fino a 768px) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem !important; /* Rimpicciolisce leggermente il titolo principale */
+    }
+    
+    .hero p {
+        font-size: 1.2rem !important; /* Adatta il sottotitolo */
+    }
+
+    /* La griglia delle foto passa da 4 colonne a 2 colonne */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        padding: 0 20px !important;
+    }
+    
+    header {
+        padding: 15px 5% !important;
+    }
+}
+
+/* 2. Regolazioni per Smartphone (schermi fino a 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem !important; /* Titolo ancora più piccolo per non andare a capo male */
+    }
+    
+    header {
+        flex-direction: column !important; /* Sposta il menu sotto al logo se non c'è spazio */
+        gap: 10px;
+        text-align: center;
+    }
+    
+    header nav {
+        gap: 15px !important; /* Avvicina i link del menu */
+    }
+
+    /* La griglia delle foto diventa a 1 sola colonna (le foto si incolonnano una sotto l'altra) */
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+    
+    h2 {
+        font-size: 2rem !important; /* Rimpicciolisce i titoli delle sezioni come 'Galleries' */
+    }
+}
