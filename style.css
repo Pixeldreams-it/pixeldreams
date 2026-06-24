@@ -275,3 +275,10 @@ footer p {
     font-size: 1.2rem !important; /* Aumenta leggermente la grandezza (es. da 1rem a 1.1rem) */
     padding: 12px 30px !important; /* Opzionale: allarga leggermente l'ovale per contenere meglio il testo */
 }
+
+#portfolio h2,
+main h2,
+.gallery-section h2,
+.portfolio h2 {
+    font-family: 'Lyon', serif !important;
+}
