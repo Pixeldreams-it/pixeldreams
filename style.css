@@ -404,10 +404,3 @@ section:last-of-type *,
 .slogan {
     font-family: 'Lyon', serif !important;
 }
-
-/* Applica il font Lyon specificatamente al titolo della sezione Vision */
-.vision-section h2,
-#vision h2 {
-    font-family: 'Lyon', serif !important;
-    text-transform: none !important; /* Mantiene le maiuscole/minuscole originali */
-}
