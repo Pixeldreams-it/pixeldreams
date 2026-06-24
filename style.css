@@ -335,3 +335,15 @@ main h2,
         font-size: 2rem !important; /* Rimpicciolisce i titoli delle sezioni come 'Galleries' */
     }
 }
+
+/* Correzione per l'immagine di sfondo principale su Smartphone e Tablet */
+@media (max-width: 768px) {
+    .hero, 
+    .hero-section,
+    section,
+    #hero {
+        background-attachment: scroll !important; /* Disattiva il 'fixed' che rompe lo zoom sui telefoni */
+        background-size: cover !important;        /* Forzerà l'immagine a coprire lo schermo senza deformarsi */
+        background-position: center center !important; /* Centra l'inquadratura della foto */
+    }
+}
