@@ -303,30 +303,50 @@ a[href^="mailto:info@studiofilipponi.com"]:hover {
         width: 100% !important;
     }
 
-    /* Header compatto con link centrati e proporzionati */
+    /* 2. Header compatto e Menu perfetto in larghezza (Riproporzionato) */
     header {
         flex-direction: column !important;
-        padding: 15px 5% !important;
-        gap: 8px !important;
+        padding: 20px 4% !important;
+        gap: 12px !important;
+        height: auto !important;
+        position: relative !important; 
+        width: 100% !important;
+        display: flex !important;
+    }
+    header .logo {
+        font-size: 1.8rem !important;
+        margin-bottom: 2px !important;
+    }
+    header nav {
+        width: 100% !important;
     }
     header nav ul {
         display: flex !important;
         flex-direction: row !important;
-        justify-content: center !important;
-        flex-wrap: wrap !important;
+        justify-content: space-between !important; /* Distribuisce simmetricamente i 3 elementi */
+        align-items: center !important;
+        width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
+        list-style: none !important;
     }
     header nav ul li {
-        margin: 5px 10px !important;
+        margin: 0 !important; 
+        padding: 6px 4px !important; /* Spazio per il click del dito */
+        flex: 1 !important;
+        text-align: center !important;
     }
     header nav ul li a {
-        font-size: 14px !important;
+        font-size: 14px !important; /* Dimensione ideale ed equilibrata */
+        font-weight: 600 !important;
+        color: var(--text-main) !important; 
+        white-space: nowrap !important; /* Impedisce che vadano a capo male */
+        display: inline-block !important;
     }
 
     /* Copertina iniziale fluida per schermi alti */
     .hero {
-        height: 55vh !important;
+        height: 60vh !important;
         background-attachment: scroll !important;
         background-size: cover !important;
         background-position: center center !important;
