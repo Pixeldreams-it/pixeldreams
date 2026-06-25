@@ -477,3 +477,36 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* ========================================== */
+/* MODIFICHE PER DISPOSITIVI MOBILI           */
+/* ========================================== */
+@media (max-width: 768px) {
+  /* Dispone il logo e il menu in verticale per risparmiare spazio */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  /* Gestisce la lista dei link del menu */
+  header nav ul {
+    display: flex;
+    flex-direction: row;     /* Mantiene i link sulla stessa linea */
+    justify-content: center;
+    flex-wrap: wrap;         /* Se lo spazio finisce, vanno a capo ma senza rompersi */
+    padding: 0;
+    margin: 10px 0 0 0;
+    list-style: none;
+  }
+
+  /* Rimpicciolisce i link e riduce lo spazio tra di loro */
+  header nav ul li {
+    margin: 5px 8px;         /* Riduce la distanza laterale tra i link */
+  }
+
+  header nav ul li a {
+    font-size: 14px;         /* Rimpicciolisce il testo per farlo stare nello schermo */
+  }
+}
