@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Lyon Corsivo';
-    src: url('Lyon-Italic.ttf') format('truetype'); /* Sostituisci 'Lyon-Italic.ttf' con il nome esatto del tuo file, attento se finisce in .ttf o .otf */
+    src: url('Lyon-Italic.ttf') format('truetype'); 
     font-style: italic;
     font-weight: normal;
 }
@@ -17,7 +17,7 @@
     --card-bg: #141414;
     --text-main: #ffffff;
     --text-muted: #888888;
-    --accent: #4caf50; /* Un verde vibrante che si sposa bene con la natura */
+    --accent: #4caf50; 
 }
 
 html {
@@ -78,20 +78,20 @@ header nav ul li a:hover {
 
 /* Hero Section (Copertina) */
 .hero {
-    background: url('AF7 copia.jpg') center 20%; /* IMPORTANTE: "top" blocca la parte alta dell'immagine */
-    background-size: 100% auto; /* Sostituisce "contain". Ingrandisce l'immagine (puoi cambiare 130% in 120% o 140% a piacimento) */
+    background: url('AF7 copia.jpg') center 20%; 
+    background-size: 100% auto; 
     background-repeat: no-repeat;
-    background-color: #000; /* Mantiene lo sfondo nero per le parti che rimangono vuote sotto */
+    background-color: #000; 
     height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    pointer-events: none;
+    pointer-events: none; /* Blocca il click destro sullo sfondo */
 }
 
 .hero h1 {
-    font-family: 'Lyon Corsivo', Georgia, serif; /* Usa il font caricato e imposta Georgia come rimpiazzo di sicurezza */
+    font-family: 'Lyon Corsivo', Georgia, serif; 
     font-style: normal !important;
     font-size: 3.5rem;
     font-weight: 25 !important;
@@ -116,6 +116,7 @@ header nav ul li a:hover {
     font-weight: 600;
     border-radius: 30px;
     transition: all 0.3s ease;
+    pointer-events: auto; /* Mantiene il bottone cliccabile */
 }
 
 .btn-cta:hover {
@@ -142,9 +143,10 @@ header nav ul li a:hover {
     color: var(--text-muted);
 }
 
+/* Griglia corretta: usa minmax dinamico per evitare che si allarghi su schermi come il Note 20 */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -163,7 +165,6 @@ header nav ul li a:hover {
     transition: transform 0.5s ease;
 }
 
-/* Effetto scuro e scritte al passaggio del mouse */
 .gallery-item:hover img {
     transform: scale(1.05);
 }
@@ -188,13 +189,14 @@ header nav ul li a:hover {
     opacity: 1;
 }
 
+/* Rimossa completamente la riga verde/rossa sotto i testi delle gallerie */
 .text {
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 1px;
-    border-bottom: 2px solid var(#ff3333);
     padding-bottom: 5px;
+    border-bottom: none !important;
 }
 
 /* Sezione Visione */
@@ -238,10 +240,10 @@ footer p {
 }
 
 .email-link {
-    color: var(--accent);
+    color: #ffffff !important;
     font-size: 1.4rem;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: normal !important;
     transition: opacity 0.3s;
 }
 
@@ -255,284 +257,129 @@ footer p {
     color: #444;
 }
 
-/* Responsive per smartphone */
-@media (max-width: 768px) {
-    header { flex-direction: column; gap: 15px; }
-    header nav ul li { margin: 0 10px; }
-    .hero h1 { font-size: 2.3rem; }
-    .gallery-grid { grid-template-columns: 1fr; }
-}
-
-.hero p, .hero h2, .hero-subtitle {
-    font-family: 'Lyon', serif !important;
-}
-
-.hero .btn, 
-.hero a, 
-.hero button,
-.hero-content a {
-    font-family: 'Lyon', serif !important;
-    text-transform: none; /* Opzionale: toglilo se vuoi evitare che sia tutto in MAIUSCOLO */
-    font-size: 1.2rem !important; /* Aumenta leggermente la grandezza (es. da 1rem a 1.1rem) */
-    padding: 12px 30px !important; /* Opzionale: allarga leggermente l'ovale per contenere meglio il testo */
-}
-
-#portfolio h2,
-main h2,
-.gallery-section h2,
-.portfolio h2 {
-    font-family: 'Lyon', serif !important;
-}
-
-/* ==========================================
-   STILI ADAPTIVE PER SMARTPHONE E TABLET 
-   ========================================== */
-
-/* 1. Regolazioni per Tablet (schermi fino a 768px) */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 3rem !important; /* Rimpicciolisce leggermente il titolo principale */
-    }
-    
-    .hero p {
-        font-size: 1.2rem !important; /* Adatta il sottotitolo */
-    }
-
-    /* La griglia delle foto passa da 4 colonne a 2 colonne */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px !important;
-        padding: 0 20px !important;
-    }
-    
-    header {
-        padding: 15px 5% !important;
-    }
-}
-
-/* 2. Regolazioni per Smartphone (schermi fino a 480px) */
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2.2rem !important; /* Titolo ancora più piccolo per non andare a capo male */
-    }
-    
-    header {
-        flex-direction: column !important; /* Sposta il menu sotto al logo se non c'è spazio */
-        gap: 10px;
-        text-align: center;
-    }
-    
-    header nav {
-        gap: 15px !important; /* Avvicina i link del menu */
-    }
-
-    /* La griglia delle foto diventa a 1 sola colonna (le foto si incolonnano una sotto l'altra) */
-    .gallery-grid {
-        grid-template-columns: 1fr !important;
-        gap: 10px !important;
-    }
-    
-    h2 {
-        font-size: 2rem !important; /* Rimpicciolisce i titoli delle sezioni come 'Galleries' */
-    }
-}
-
-/* Correzione per l'immagine di sfondo principale su Smartphone e Tablet */
-@media (max-width: 768px) {
-    .hero, 
-    .hero-section,
-    section,
-    #hero {
-        background-attachment: scroll !important; /* Disattiva il 'fixed' che rompe lo zoom sui telefoni */
-        background-size: cover !important;        /* Forzerà l'immagine a coprire lo schermo senza deformarsi */
-        background-position: center center !important; /* Centra l'inquadratura della foto */
-    }
-}
-
-/* Regolazione specifica per Smartphone (fino a 480px) */
-@media (max-width: 480px) {
-    .hero, 
-    #hero, 
-    .hero-section {
-        /* 1. RESET TOTALE DELL'ALTEZZA */
-        height: auto !important;          /* Lascia che il contenuto decida l'altezza */
-        min-height: 0 !important;         /* Rimuove vincoli minimi */
-        padding-top: 56.25% !important;   /* Trucco CSS: Crea un'area con proporzioni 16:9 (o 66.6% per 3:2) */
-        
-        /* 2. RESET STILI SFONDO */
-        background-attachment: scroll !important; /* Obbligatorio su mobile */
-        background-size: cover !important;        /* Riempie l'area senza deformare */
-        background-position: center center !important; /* Centra il soggetto della foto */
-    }
-
-    /* 3. SISTEMIAMO IL CONTENUTO SOPRA L'IMMAGINE */
-    .hero-content, 
-    .hero .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%; /* Occupa quasi tutta la larghezza */
-        text-align: center;
-        padding: 0 !important;
-    }
-}
-
-a[href^="mailto:info@studiofilipponi.com"],
-a[href="mailto:info@studiofilipponi.com"],
-.contact-section a,
-footer a {
-    color: #ffffff !important;      /* Forza il colore bianco */
-    font-weight: normal !important;  /* Rimuove il grassetto */
-    text-decoration: none;           /* Opzionale: rimuove la sottolineatura se presente */
-}
-
-/* Mantiene il colore bianco anche quando ci passi sopra con il mouse */
-a[href^="mailto:info@studiofilipponi.com"]:hover {
-    color: #ffffff !important;
-    opacity: 0.8;                    /* Opzionale: una leggera trasparenza quando ci passi sopra */
-}
-
-/* 1. Cerca qualsiasi elemento di testo nella pagina e applica il font Lyon */
-h1, h2, h3, h4, h5, h6, p, span, div {
-    font-family: 'Lyon', serif !important;
-}
-
-/* 2. Target specifico per le ultime sezioni della pagina */
-section:last-of-type, 
-section:last-of-type *,
-.brand-slogan,
-.slogan {
-    font-family: 'Lyon', serif !important;
-}
-
-/* ==========================================
-   RIDUZIONE TESTI PER SMARTPHONE (MAX 480PX)
-   ========================================== */
-@media (max-width: 480px) {
-    
-    /* Il titolo principale (es. "Pixel dreams" o il titolo della Home) */
-    .hero h1, 
-    #hero h1,
-    .hero-content h1 {
-        font-size: 2rem !important; /* Ridotto per farlo stare in una riga sola */
-        line-height: 1.2 !important;
-    }
-
-    /* Il sottotitolo o i paragrafi dentro la sezione iniziale */
-    .hero p, 
-    #hero p,
-    .hero-content p {
-        font-size: 1rem !important; /* Testo leggibile ma compatto */
-        line-height: 1.4 !important;
-    }
-
-    /* La scritta "Through the lens" che abbiamo modificato prima */
-    .vision-section h2,
-    #vision h2 {
-        font-size: 1.8rem !important; /* Evita che il titolo della filosofia sia gigante */
-        text-align: center !important;
-    }
-
-    /* Il testo lungo della filosofia ("Fotografare la natura non significa...") */
-    .vision-content p,
-    #vision p {
-        font-size: 0.95rem !important; /* Dimensione perfetta per i paragrafi da telefono */
-        line-height: 1.6 !important;   /* Dà aria alle righe così si legge bene */
-        padding: 0 10px !important;    /* Evita che il testo tocchi i bordi dello schermo */
-    }
-
-    /* Il titolo "Galleries" */
-    #portfolio h2,
-    .gallery-section h2 {
-        font-size: 1.8rem !important;
-    }
-}
-
-/* ======================================================= */
-/* INIZIO MODIFICHE PER MOBILE (INCOLLALE QUI IN FONDO)   */
-/* ======================================================= */
-
-@media (max-width: 768px) {
-  /* Sostituisci "nav" con la classe reale del tuo menu se necessario */
-  nav {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-  }
-  nav a {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-
-  /* Modifiche per il titolo Pixeldreams che strorda */
-  /* Nota: sostituisci ".hero-title" con la classe o l'id vero del tuo titolo (es. h1 o .title) */
-  .hero-title {
-    font-size: 8vw; 
-    letter-spacing: 2px; 
-  }
-}
-
-/* Regole generali per le immagini fluide */
+/* Protezione Immagini globale */
 img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ========================================== */
-/* MODIFICHE PER DISPOSITIVI MOBILI           */
-/* ========================================== */
-@media (max-width: 768px) {
-  /* Dispone il logo e il menu in verticale per risparmiare spazio */
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px 10px;
-  }
-
-  /* Gestisce la lista dei link del menu */
-  header nav ul {
-    display: flex;
-    flex-direction: row;     /* Mantiene i link sulla stessa linea */
-    justify-content: center;
-    flex-wrap: wrap;         /* Se lo spazio finisce, vanno a capo ma senza rompersi */
-    padding: 0;
-    margin: 10px 0 0 0;
-    list-style: none;
-  }
-
-  /* Rimpicciolisce i link e riduce lo spazio tra di loro */
-  header nav ul li {
-    margin: 5px 8px;         /* Riduce la distanza laterale tra i link */
-  }
-
-  header nav ul li a {
-    font-size: 14px;         /* Rimpicciolisce il testo per farlo stare nello schermo */
-  }
-}
-
-hr, .gallery hr, [class*="line"] {
-    border-color: #ff3333 !important;
-    background-color: #ff3333 !important;
-}
-
-/* Impedisce il trascinamento e la selezione delle immagini */
-img {
+    max-width: 100%;
+    height: auto;
     user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
 }
 
-/* Forza la linea sotto Landscapes a diventare rossa */
-hr, 
-.gallery hr, 
-.card hr,
-[class*="line"], 
-[class*="border"] {
-    border-color: #ff3333 !important;
-    background-color: #ff3333 !important;
-    color: #ff3333 !important;
+/* Applicazione Font globale */
+h1, h2, h3, h4, h5, h6, p, span, div, .hero p, .hero h2, .hero-subtitle, #portfolio h2, main h2, .gallery-section h2, .portfolio h2 {
+    font-family: 'Lyon', serif !important;
 }
 
+.hero .btn, .hero a, .hero button, .hero-content a {
+    font-family: 'Lyon', serif !important;
+    text-transform: none;
+    font-size: 1.2rem !important;
+    padding: 12px 30px !important;
+}
+
+/* Link Email Forzati Bianchi */
+a[href^="mailto:info@studiofilipponi.com"],
+a[href="mailto:info@studiofilipponi.com"],
+.contact-section a,
+footer a {
+    color: #ffffff !important;
+    font-weight: normal !important;
+    text-decoration: none;
+}
+a[href^="mailto:info@studiofilipponi.com"]:hover {
+    color: #ffffff !important;
+    opacity: 0.8;
+}
+
+/* ======================================================= */
+/* BLOCCO RESPONSIVE UNIFICATO E OTTIMIZZATO PER SMARTPHONE */
+/* ======================================================= */
+@media (max-width: 500px) {
+    /* Impedisce lo scorrimento laterale sul Note 20 Ultra */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* Header compatto con link centrati e proporzionati */
+    header {
+        flex-direction: column !important;
+        padding: 15px 5% !important;
+        gap: 8px !important;
+    }
+    header nav ul {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    header nav ul li {
+        margin: 5px 10px !important;
+    }
+    header nav ul li a {
+        font-size: 14px !important;
+    }
+
+    /* Copertina iniziale fluida per schermi alti */
+    .hero {
+        height: 55vh !important;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+    .hero h1 {
+        font-size: 2rem !important;
+        letter-spacing: 3px !important;
+        line-height: 1.2 !important;
+    }
+    .hero p {
+        font-size: 1.1rem !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Griglia foto a colonna singola perfetta, nessun ritaglio laterale */
+    .gallery-section {
+        padding: 40px 5% !important;
+    }
+    .gallery-section h2 {
+        font-size: 1.8rem !important;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .gallery-item {
+        width: 100% !important;
+        aspect-ratio: 3 / 2 !important;
+    }
+    .text {
+        font-size: 1rem !important;
+    }
+
+    /* Sezione Filosofia leggibile su mobile */
+    .vision-section {
+        padding: 50px 5% !important;
+    }
+    .vision-content h2 {
+        font-size: 1.8rem !important;
+    }
+    .vision-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        padding: 0 5px !important;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 5% !important;
+    }
+    .email-link {
+        font-size: 1.1rem !important;
+    }
+}
