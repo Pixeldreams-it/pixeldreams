@@ -52,7 +52,7 @@ header .logo {
 
 header .logo span {
     color: red;
-    font-weight: 300; /* Questo FORZAVA la parte rossa ad essere più sottile */
+    font-weight: 700; /* Modificato da 300 a 700 per ripristinare il grassetto */
 }
 
 header nav ul {
