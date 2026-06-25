@@ -45,17 +45,14 @@ header {
 }
 
 header .logo {
-    font-family: 'Inter', sans-serif !important; /* Forza il font lineare originale */
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 700; /* Questo dà il grassetto a TUTTO il logo */
     letter-spacing: -0.5px;
-    color: var(--text-main) !important;
 }
 
 header .logo span {
-    color: red !important;
-    font-weight: 300;
-    font-family: 'Inter', sans-serif !important;
+    color: red;
+    font-weight: 300; /* Questo FORZAVA la parte rossa ad essere più sottile */
 }
 
 header nav ul {
