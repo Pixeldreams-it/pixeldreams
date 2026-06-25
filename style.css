@@ -447,3 +447,33 @@ section:last-of-type *,
         font-size: 1.8rem !important;
     }
 }
+
+/* ======================================================= */
+/* INIZIO MODIFICHE PER MOBILE (INCOLLALE QUI IN FONDO)   */
+/* ======================================================= */
+
+@media (max-width: 768px) {
+  /* Sostituisci "nav" con la classe reale del tuo menu se necessario */
+  nav {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+  nav a {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  /* Modifiche per il titolo Pixeldreams che strorda */
+  /* Nota: sostituisci ".hero-title" con la classe o l'id vero del tuo titolo (es. h1 o .title) */
+  .hero-title {
+    font-size: 8vw; 
+    letter-spacing: 2px; 
+  }
+}
+
+/* Regole generali per le immagini fluide */
+img {
+  max-width: 100%;
+  height: auto;
+}
