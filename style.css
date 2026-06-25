@@ -510,3 +510,8 @@ img {
     font-size: 14px;         /* Rimpicciolisce il testo per farlo stare nello schermo */
   }
 }
+
+hr, .gallery hr, [class*="line"] {
+    border-color: #ff3333 !important;
+    background-color: #ff3333 !important;
+}
