@@ -87,6 +87,7 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    pointer-events: none;
 }
 
 .hero h1 {
