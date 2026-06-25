@@ -31,12 +31,12 @@ body {
     line-height: 1.6;
 }
 
-/* Navigazione */
+/* Navigazione Desktop (Ripristinata originale) */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 8%;
+    padding: 20px 8%; /* Spessore originale della barra su PC */
     background-color: rgba(11, 11, 11, 0.85);
     backdrop-filter: blur(10px);
     position: sticky;
@@ -45,6 +45,7 @@ header {
 }
 
 header .logo {
+    font-family: 'Inter', sans-serif !important; /* Forza il font corretto e pulito per il logo */
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -65,6 +66,7 @@ header nav ul li {
 }
 
 header nav ul li a {
+    font-family: 'Inter', sans-serif !important; /* Mantiene puliti anche i link su PC */
     text-decoration: none;
     color: var(--text-muted);
     font-weight: 400;
@@ -267,9 +269,12 @@ img {
     -ms-user-select: none;
 }
 
-/* Applicazione Font globale */
+/* Applicazione Font globale (Escluso il logo e i menu) */
 h1, h2, h3, h4, h5, h6, p, span, div, .hero p, .hero h2, .hero-subtitle, #portfolio h2, main h2, .gallery-section h2, .portfolio h2 {
     font-family: 'Lyon', serif !important;
+}
+header .logo, header .logo span, header nav ul li a {
+    font-family: 'Inter', sans-serif !important; /* Protegge il logo e menu PC dal font graziato */
 }
 
 .hero .btn, .hero a, .hero button, .hero-content a {
@@ -303,11 +308,11 @@ a[href^="mailto:info@studiofilipponi.com"]:hover {
         width: 100% !important;
     }
 
-    /* 2. Header a colonna ultra-compatto (Spaziature ridotte al minimo) */
+    /* 2. Header a colonna ultra-compatto per Smartphone */
     header {
         flex-direction: column !important;
-        padding: 10px 5% !important; /* Ridotto il padding sopra e sotto */
-        gap: 4px !important;       /* Quasi azzerato lo spazio tra Logo e Menu */
+        padding: 10px 5% !important; 
+        gap: 4px !important;       
         height: auto !important;
         position: relative !important; 
         width: 100% !important;
@@ -315,7 +320,8 @@ a[href^="mailto:info@studiofilipponi.com"]:hover {
         text-align: center !important;
     }
     header .logo {
-        font-size: 1.7rem !important; /* Leggermente più piccolo per occupare meno spazio vertically */
+        font-family: 'Inter', sans-serif !important;
+        font-size: 1.7rem !important; 
         margin-bottom: 0px !important;
     }
     header nav {
@@ -330,44 +336,11 @@ a[href^="mailto:info@studiofilipponi.com"]:hover {
         margin: 0 !important;
         padding: 0 !important;
         list-style: none !important;
-        gap: 2px !important; /* Spazio verticale tra i tre link ridotto al minimo indispensabile */
+        gap: 2px !important; 
     }
     header nav ul li {
         margin: 0 !important; 
-        padding: 2px 0 !important; /* Stringe l'ingombro attorno al singolo link */
+        padding: 2px 0 !important; 
         width: 100% !important;
     }
-    header nav ul li a {
-        font-size: 14px !important; /* Torniamo a 14px per farlo più fine ed elegante */
-        font-weight: 500 !important;
-        color: var(--text-muted) !important; 
-        display: inline-block !important;
-        padding: 2px 10px !important; /* Ridotto il padding interno del link */
-        letter-spacing: 1px !important;
-    }
-    
-    /* Evidenzia il link quando viene toccato */
-    header nav ul li a:active, header nav ul li a:hover {
-        color: var(--text-main) !important;
-    }
-
-    /* Copertina iniziale fluida per schermi alti */
-    .hero {
-        height: 60vh !important;
-        background-attachment: scroll !important;
-        background-size: cover !important;
-        background-position: center center !important;
-    }
-    .hero h1 {
-        font-size: 2rem !important;
-        letter-spacing: 3px !important;
-        line-height: 1.2 !important;
-    }
-    .hero p {
-        font-size: 1.1rem !important;
-        line-height: 1.4 !important;
-    }
-
-    /* Griglia foto a colonna singola perfetta, nessun ritaglio laterale */
-    .gallery-section {
-        padding: 40px 5% !important
+    header nav ul
