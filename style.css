@@ -523,3 +523,14 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+
+/* Forza la linea sotto Landscapes a diventare rossa */
+hr, 
+.gallery hr, 
+.card hr,
+[class*="line"], 
+[class*="border"] {
+    border-color: #ff3333 !important;
+    background-color: #ff3333 !important;
+    color: #ff3333 !important;
+}
