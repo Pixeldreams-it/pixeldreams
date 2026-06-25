@@ -213,10 +213,28 @@ img {
 /* OTTIMIZZAZIONE E ELEGANZA BLOCCHI FINALI (TESTI E MARGINI) */
 /* ======================================================= */
 
-/* Margini, spaziatura aumentata e centratura totale per le sezioni di testo a fondo pagina */
-body > div:last-of-type, body > section:last-of-type, footer, .vision-section {
-    padding: 120px 8% 80px 8% !important; /* Dà ampio respiro e aria tra i blocchi */
+/* Margini, spaziatura e centratura geometrica assoluta a fondo pagina */
+body > div:last-of-type, 
+body > section:last-of-type, 
+footer, 
+.vision-section,
+.vision-content {
+    padding: 120px 8% 80px 8% !important; /* Ampio respiro tra i blocchi */
     text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Allinea al centro i tag di blocco */
+    justify-content: center !important;
+}
+
+/* Forza la centratura di ogni testo o sotto-elemento all'interno delle sezioni finali */
+body > div:last-of-type *, 
+body > section:last-of-type *, 
+footer *, 
+.vision-section * {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 /* Applicazione Font Lyon Elegante a tutte le scritte e titoli finali */
@@ -240,31 +258,33 @@ header, header *, header .logo, header .logo span, header nav ul li a {
 
 /* Titoli delle sezioni finali ("Through the lens" e "Contatti") */
 body > div:last-child h2, footer h3, .vision-content h2 {
-    font-size: 3rem !important; /* Ingranditi per un look editoriale e d'impatto */
+    font-size: 3rem !important; /* Ingranditi per un look più artistico ed editoriale */
     letter-spacing: 1px;
-    margin-bottom: 40px !important; /* Distanza generosa dal testo sottostante */
+    margin-bottom: 40px !important; /* Distanza dal testo sottostante */
     font-weight: normal !important;
+    width: 100%;
 }
 
 /* Paragrafi descrittivi (Il testo della filosofia/visione) */
 body > div:last-child p, footer p, .vision-content p {
-    max-width: 750px; /* Larghezza controllata per facilitare una lettura elegante */
-    margin: 0 auto 40px auto !important; 
+    max-width: 750px; /* Larghezza controllata per facilitare una lettura fluida ed elegante */
     color: var(--text-muted) !important;
     font-size: 1.3rem !important; /* Carattere ingrandito */
-    line-height: 1.9 !important; /* Interlinea ariosa */
+    line-height: 1.9 !important; /* Interlinea molto ariosa */
+    margin-bottom: 40px !important;
 }
 
-/* RIPRISTINO LINK E EMAIL: Forzati eleganti, bianchi e senza sottolineatura blu */
+/* RIPRISTINO LINK E EMAIL: Forzati eleganti, bianchi, centrati e senza sottolineatura */
 a, footer a, .vision-section a, .email-link {
     color: #ffffff !important;
     font-weight: normal !important;
     text-decoration: none !important;
     transition: opacity 0.3s ease;
-    font-size: 1.6rem !important; /* Email ben visibile */
+    font-size: 1.6rem !important; 
     letter-spacing: 0.5px;
     margin-top: 15px !important;
-    display: inline-block;
+    display: inline-block !important;
+    text-align: center !important;
 }
 
 a:hover, footer a:hover, .vision-section a:hover, .email-link:hover {
@@ -274,11 +294,12 @@ a:hover, footer a:hover, .vision-section a:hover, .email-link:hover {
 
 /* Testo del Copyright a fondo pagina */
 .copyright {
-    margin-top: 100px !important; /* Distanzia nettamente il copyright dai contatti */
+    margin-top: 100px !important; /* Spinge il copyright visibilmente più in basso */
     font-size: 0.9rem !important;
     color: #444 !important;
-    font-family: 'Inter', sans-serif !important; /* Rimane pulito, minimale e moderno */
+    font-family: 'Inter', sans-serif !important; /* Rimane pulito, moderno e leggibile */
     letter-spacing: 0.5px;
+    width: 100%;
 }
 
 /* ======================================================= */
@@ -372,4 +393,18 @@ a:hover, footer a:hover, .vision-section a:hover, .email-link:hover {
     }
 
     /* Adattamento dei testi finali su Mobile */
-    body > div
+    body > div:last-child, footer, .vision-section {
+        padding: 50px 5% !important;
+    }
+    body > div:last-child h2, footer h3, .vision-content h2 {
+        font-size: 2rem !important;
+        margin-bottom: 20px !important;
+    }
+    body > div:last-child p, footer p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+    .email-link, footer a {
+        font-size: 1.2rem !important;
+    }
+}
