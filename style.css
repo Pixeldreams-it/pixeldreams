@@ -534,3 +534,12 @@ hr,
     background-color: #ff3333 !important;
     color: #ff3333 !important;
 }
+
+/* Nasconde completamente la riga verde in tutte le gallerie */
+hr, 
+.gallery hr, 
+.card hr,
+[class*="line"], 
+[class*="border"] {
+    display: none !important;
+}
