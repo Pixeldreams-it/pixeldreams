@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixeldreams | Landscape and Nature Photography</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font moderno ed elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigazione minimale -->
     <header>
         <div class="logo">Pixel<span>dreams</span></div>
         <nav>
@@ -22,7 +20,6 @@
         </nav>
     </header>
 
-    <!-- Copertina Impatto (Hero) -->
     <section class="hero">
         <div class="hero-content">
             <h1>Pixeldreams</h1>
@@ -31,15 +28,13 @@
         </div>
     </section>
 
-    <!-- Galleria Portfolio -->
     <section id="portfolio" class="gallery-section">
         <div class="section-header">
             <h2>Galleries</h2>
-            </div>
+        </div>
         
         <div class="gallery-grid">
-            <!-- NOTA: Sostituisci questi link di esempio con le TUE foto quando caricherai il sito -->
-        <div id="landscapes" class="gallery-item">
+            <div id="landscapes" class="gallery-item">
                 <img src="AF83 copia.jpg" alt="Montagna">
                 <div class="overlay"><div class="text">Landscapes</div></div>
             </div>
@@ -51,14 +46,13 @@
                 <img src="AF6 copia.jpg" alt="Astratto">
                 <div class="overlay"><div class="text">Dreamscapes</div></div>
             </div>
-            <div id="Human Environment" class="gallery-item">
+            <div id="human-environment" class="gallery-item">
                 <img src="AF72 copia.jpg" alt="Garda">
                 <div class="overlay"><div class="text">Human Environment</div></div>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Filosofia / Chi Sono -->
     <section id="vision" class="vision-section">
         <div class="vision-content">
             <h2>Through the lens</h2>
@@ -68,7 +62,6 @@ Da allora, quando è possibile, cerco di immortalarla nei miei scatti al meglio 
         </div>
     </section>
 
-    <!-- Footer e Contatti -->
     <footer id="contatti">
         <div class="footer-container">
             <h3>Contatti</h3>
@@ -80,11 +73,12 @@ Da allora, quando è possibile, cerco di immortalarla nei miei scatti al meglio 
     </footer>
 
     <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('img').forEach(img => {
-      img.addEventListener('contextmenu', e => e.preventDefault());
-    });
-  });
-</script>
+      // Blocca il click destro su tutto ciò che riguarda le gallerie (immagini e scritte overlay comprese)
+      window.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG' || e.target.closest('.gallery-item')) {
+          e.preventDefault();
+        }
+      }, true);
+    </script>
 </body>
 </html>
