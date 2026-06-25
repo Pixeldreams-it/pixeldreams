@@ -515,3 +515,11 @@ hr, .gallery hr, [class*="line"] {
     border-color: #ff3333 !important;
     background-color: #ff3333 !important;
 }
+
+/* Impedisce il trascinamento e la selezione delle immagini */
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
