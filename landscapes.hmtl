@@ -66,45 +66,43 @@
         </div>
 
         <div class="internal-gallery-grid">
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-1.webp" alt="Landscape 1" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-2.webp" alt="Landscape 2" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-3.webp" alt="Landscape 3" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-4.webp" alt="Landscape 4" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-5.webp" alt="Landscape 5" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-6.webp" alt="Landscape 6" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-7.webp" alt="Landscape 7" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-8.webp" alt="Landscape 8" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-9.webp" alt="Landscape 9" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-10.webp" alt="Landscape 10" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-11.webp" alt="Landscape 11" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-12.webp" alt="Landscape 12" loading="lazy"></div>
-
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-13.webp" alt="Landscape 13" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-14.webp" alt="Landscape 14" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-15.webp" alt="Landscape 15" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-16.webp" alt="Landscape 16" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-17.webp" alt="Landscape 17" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-18.webp" alt="Landscape 18" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-19.webp" alt="Landscape 19" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-20.webp" alt="Landscape 20" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-21.webp" alt="Landscape 21" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-22.webp" alt="Landscape 22" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-23.webp" alt="Landscape 23" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-24.webp" alt="Landscape 24" loading="lazy"></div>
-
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-25.webp" alt="Landscape 25" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-26.webp" alt="Landscape 26" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-27.webp" alt="Landscape 27" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-28.webp" alt="Landscape 28" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-29.webp" alt="Landscape 29" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-30.webp" alt="Landscape 30" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-31.webp" alt="Landscape 31" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-32.webp" alt="Landscape 32" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-33.webp" alt="Landscape 33" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-34.webp" alt="Landscape 34" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-35.webp" alt="Landscape 35" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/landscape-36.webp" alt="Landscape 36" loading="lazy"></div>
-        </div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF3.jpg" alt="Landscape 1" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF4.jpg" alt="Landscape 2" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF5.jpg" alt="Landscape 3" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF8.jpg" alt="Landscape 4" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF9.jpg" alt="Landscape 5" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF18.jpg  alt="Landscape 6" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF19.jpg" alt="Landscape 7" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF21.jpg" alt="Landscape 8" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF22.jpg" alt="Landscape 9" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF26.jpg" alt="Landscape 10" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF28.jpg" alt="Landscape 11" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF29.jpg" alt="Landscape 12" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF32.jpg" alt="Landscape 13" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF33.jpg" alt="Landscape 14" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF34.jpg" alt="Landscape 15" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF36.jpg" alt="Landscape 16" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF37.jpg" alt="Landscape 17" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF38.jpg" alt="Landscape 18" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF39.jpg" alt="Landscape 19" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF40.jpg" alt="Landscape 20" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF87.jpg" alt="Landscape 21" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF41.jpg" alt="Landscape 22" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF42.jpg" alt="Landscape 23" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF43.jpg" alt="Landscape 24" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF44.jpg  alt="Landscape 25" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF45.jpg" alt="Landscape 26" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF46.jpg" alt="Landscape 27" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF48.jpg" alt="Landscape 28" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF51.jpg" alt="Landscape 29" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF66.jpg" alt="Landscape 30" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF80.jpg" alt="Landscape 31" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF83.jpg" alt="Landscape 32" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF86.jpg" alt="Landscape 33" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF87.jpg" alt="Landscape 34" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF88.jpg" alt="Landscape 35" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF89.jpg" alt="Landscape 36" loading="lazy"></div>
+            </div>
     </main>
 
     <footer id="contatti">
