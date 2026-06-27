@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamscapes | Pixeldreams</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Stili aggiuntivi specifici per questa pagina */
+        .back-btn {
+            display: inline-block;
+            margin: 40px 0 20px 0;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+        .dreamscapes-header {
+            text-align: center;
+            padding: 20px 20px 40px 20px;
+        }
+        .dreamscapes-header h1 {
+            font-size: 2.5rem;
+            margin-top: 15px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" style="background-color: #0c0c0c; color: #fff;">
+
+    <header>
+        <div class="logo">Pixel<span>dreams</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#vision">Through the lens</a></li>
+                <li><a href="index.html#contatti">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-section" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; min-height: 70vh;">
+        <div class="dreamscapes-header">
+            <a href="index.html#portfolio" class="back-btn">&larr; Torna alle Gallerie</a>
+            <h1>Dreamscapes</h1>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="foto-dreamscape-1.jpg" alt="Dreamscape 1">
+            </div>
+            <div class="gallery-item">
+                <img src="foto-dreamscape-2.jpg" alt="Dreamscape 2">
+            </div>
+            <div class="gallery-item">
+                <img src="foto-dreamscape-3.jpg" alt="Dreamscape 3">
+            </div>
+            <div class="gallery-item">
+                <img src="foto-dreamscape-4.jpg" alt="Dreamscape 4">
+            </div>
+            <div class="gallery-item">
+                <img src="foto-dreamscape-5.jpg" alt="Dreamscape 5">
+            </div>
+        </div>
+    </main>
+
+    <footer id="contatti">
+        <div class="footer-container">
+            <h3>Contatti</h3>
+            <a href="mailto:info@studiofilipponi.com" class="email-link">info@studiofilipponi.com</a>
+            <div class="copyright">
+                <p>&copy; 2026 Pixeldreams. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // Mantiene protette dal click destro anche le immagini dentro questa galleria
+      window.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG' || e.target.closest('.gallery-item')) {
+          e.preventDefault();
+        }
+      }, true);
+    </script>
+</body>
+</html>
