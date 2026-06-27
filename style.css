@@ -77,10 +77,12 @@ header nav ul li a:hover {
     color: var(--text-main) !important;
 }
 
-/* Hero Section (Copertina) - CORRETTA PER EVITARE LO ZOOM DA BUG */
+/* ======================================================= */
+/* HERO SECTION (COPERTINA) - RISOLTO IL BUG FUCSIA        */
+/* ======================================================= */
 .hero {
     background: url('AF7 copia.jpg') center center; 
-    background-size: cover; /* Forza l'immagine a riempire solo lo spazio della hero senza deformarsi */
+    background-size: cover !important; /* BLOCCHETTO DI SICUREZZA: impedisce lo zoom infinito */
     background-repeat: no-repeat;
     background-color: #000; 
     height: 85vh;
@@ -197,7 +199,9 @@ header nav ul li a:hover {
     border-bottom: none !important;
 }
 
-/* Griglia Interna per le pagine delle foto (Es. Landscapes) */
+/* ======================================================= */
+/* STRUTTURA DELLE GRIGLIE INTERNE (Es. Landscapes)        */
+/* ======================================================= */
 .internal-gallery-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
