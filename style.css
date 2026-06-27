@@ -77,15 +77,14 @@ header nav ul li a:hover {
     color: var(--text-main) !important;
 }
 
-/* ======================================================= */
-/* HERO SECTION (COPERTINA) - RISOLTO IL BUG FUCSIA        */
-/* ======================================================= */
+/* Hero Section (Copertina) - Centrata e allineata sotto l'header */
 .hero {
-    background: url('AF7 copia.jpg') center center; 
-    background-size: cover !important; /* BLOCCHETTO DI SICUREZZA: impedisce lo zoom infinito */
+    background-image: url('AF7 copia.jpg');
+    background-position: center top; /* Centra l'immagine orizzontalmente e la ancora in alto */
+    background-size: cover;          /* Riempie lo spazio della hero senza deformarsi o creare zoom infiniti */
     background-repeat: no-repeat;
     background-color: #000; 
-    height: 85vh;
+    height: 85vh;                    /* Occupa l'85% dell'altezza dello schermo, partendo da sotto l'header */
     width: 100%;
     display: flex;
     justify-content: center;
