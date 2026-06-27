@@ -1,5 +1,41 @@
-<div class="gallery-grid">
-            <a href="landscapes.html" id="landscapes" class="gallery-item" style="text-decoration: none; display: block;">
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixeldreams | Portfolio</title>
+    <link rel="stylesheet" href="style.css?v=999">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body oncontextmenu="return false;">
+
+    <header>
+        <div class="logo">Pixel<span>dreams</span></div>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#vision">Through the lens</a></li>
+                <li><a href="#contatti">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero" style="background: url('AF7 copia.jpg') center center no-repeat !important; background-size: cover !important; height: 85vh !important; width: 100% !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important;">
+        <div>
+            <h1>Pixeldreams</h1>
+            <p>Fotografia e Visione</p>
+            <a href="#portfolio" class="btn-cta" style="pointer-events: auto !important;">Esplora</a>
+        </div>
+    </div>
+
+    <section class="gallery-section" id="portfolio">
+        <div class="section-header">
+            <h2>Portfolio</h2>
+            <p>Seleziona una categoria per vedere i lavori</p>
+        </div>
+
+        <div class="gallery-grid">
+            <a href="landscapes.html" id="landscapes" class="gallery-item" style="text-decoration: none !important; display: block !important;">
                 <img src="AF83 copia.jpg" alt="Montagna">
                 <div class="overlay"><div class="text">Landscapes</div></div>
             </a>
@@ -9,13 +45,34 @@
                 <div class="overlay"><div class="text">Seascapes</div></div>
             </div>
             
-            <a href="dreamscapes.html" id="dreamscapes" class="gallery-item" style="text-decoration: none; display: block;">
+            <a href="dreamscapes.html" id="dreamscapes" class="gallery-item" style="text-decoration: none !important; display: block !important;">
                 <img src="AF6 copia.jpg" alt="Astratto">
                 <div class="overlay"><div class="text">Dreamscapes</div></div>
             </a>
             
-            <a href="human-environment.html" id="human-environment" class="gallery-item" style="text-decoration: none; display: block;">
+            <a href="human-environment.html" id="human-environment" class="gallery-item" style="text-decoration: none !important; display: block !important;">
                 <img src="AF72 copia.jpg" alt="Garda">
                 <div class="overlay"><div class="text">Human Environment</div></div>
             </a>
         </div>
+    </section>
+
+    <footer id="contatti">
+        <div class="footer-container">
+            <h3>Contatti</h3>
+            <a href="mailto:info@studiofilipponi.com" class="email-link">info@studiofilipponi.com</a>
+            <div class="copyright">
+                <p>&copy; 2026 Pixeldreams. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      window.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+        }
+      }, true);
+    </script>
+</body>
+</html>
