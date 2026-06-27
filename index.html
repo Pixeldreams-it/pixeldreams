@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixeldreams | Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=999">
+    <title>Pixeldreams | Landscape and Nature Photography</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body oncontextmenu="return false;">
@@ -20,43 +20,39 @@
         </nav>
     </header>
 
-    <div class="hero" style="background: url('AF7 copia.jpg') center center no-repeat !important; background-size: cover !important; height: 85vh !important; width: 100% !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important;">
-        <div>
+    <section class="hero">
+        <div class="hero-content">
             <h1>Pixeldreams</h1>
             <p>Landscape and Nature Photography</p>
-            <a href="#portfolio" class="btn-cta" style="pointer-events: auto !important;">Esplora</a>
+            <a href="#portfolio" class="btn-cta">Galleries</a>
         </div>
-    </div>
+    </section>
 
-    <section class="gallery-section" id="portfolio">
+    <section id="portfolio" class="gallery-section">
         <div class="section-header">
-            <h2>Portfolio</h2>
-            <p>Seleziona una categoria per vedere i lavori</p>
+            <h2>Galleries</h2>
         </div>
-
+        
         <div class="gallery-grid">
-            <a href="landscapes.html" id="landscapes" class="gallery-item" style="text-decoration: none !important; display: block !important;">
+            <div id="landscapes" class="gallery-item">
                 <img src="AF83 copia.jpg" alt="Montagna">
                 <div class="overlay"><div class="text">Landscapes</div></div>
-            </a>
-            
+            </div>
             <div id="seascapes" class="gallery-item">
                 <img src="AF12 copia.jpg" alt="Mare">
                 <div class="overlay"><div class="text">Seascapes</div></div>
             </div>
-            
-            <a href="dreamscapes.html" id="dreamscapes" class="gallery-item" style="text-decoration: none !important; display: block !important;">
+            <div id="dreamscapes" class="gallery-item">
                 <img src="AF6 copia.jpg" alt="Astratto">
                 <div class="overlay"><div class="text">Dreamscapes</div></div>
-            </a>
-            
-            <a href="human-environment.html" id="human-environment" class="gallery-item" style="text-decoration: none !important; display: block !important;">
+            </div>
+            <div id="human-environment" class="gallery-item">
                 <img src="AF72 copia.jpg" alt="Garda">
                 <div class="overlay"><div class="text">Human Environment</div></div>
-            </a>
+            </div>
         </div>
     </section>
- <!-- Sezione Filosofia / Chi Sono -->
+
     <section id="vision" class="vision-section">
         <div class="vision-content">
             <h2>Through the lens</h2>
@@ -65,9 +61,10 @@ Da allora, quando mi guardo intorno ed osservo, la vedo in tutta la sua perfetta
 Da allora, quando è possibile, cerco di immortalarla nei miei scatti al meglio delle mie capacità, che non sono mai al suo livello e ciò mi spinge a migliorare ancora ... Che il viaggio abbia inizio ...</p>
         </div>
     </section>
+
     <footer id="contatti">
         <div class="footer-container">
-            <h3>Contacts</h3>
+            <h3>Contatti</h3>
             <a href="mailto:info@studiofilipponi.com" class="email-link">info@studiofilipponi.com</a>
             <div class="copyright">
                 <p>&copy; 2026 Pixeldreams. Tutti i diritti riservati.</p>
@@ -76,8 +73,9 @@ Da allora, quando è possibile, cerco di immortalarla nei miei scatti al meglio 
     </footer>
 
     <script>
+      // Blocca il click destro su tutto ciò che riguarda le gallerie (immagini e scritte overlay comprese)
       window.addEventListener('contextmenu', function (e) {
-        if (e.target.tagName === 'IMG') {
+        if (e.target.tagName === 'IMG' || e.target.closest('.gallery-item')) {
           e.preventDefault();
         }
       }, true);
