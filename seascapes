@@ -66,14 +66,23 @@
         </div>
 
         <div class="internal-gallery-grid">
-            <div class="internal-gallery-item"><img src="images/seascapes/AF12.jpg" alt="Seascape 1" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/seascapes/AF1.jpg" alt="Seascape 2" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/seascapes/AF2.jpg" alt="Seascape 3" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/seascapes/AF3.jpg" alt="Seascape 4" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/seascapes/AF4.jpg" alt="Seascape 5" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/seascapes/AF5.jpg" alt="Seascape 6" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/seascapes/AF6.jpg" alt="Seascape 7" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/seascapes/AF7.jpg" alt="Seascape 8" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF7.jpg" alt="Seascape 4" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF10.jpg" alt="Seascape 5" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF11.jpg" alt="Seascape 6" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF12.jpg" alt="Seascape 7" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF13.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF14.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF23.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF31.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF52.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF53.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF70.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF73.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF74.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF75.jpg" alt="Seascape 8" loading="lazy"></div>
+<div class="internal-gallery-item"><img src="images/seascapes/AF76.jpg" alt="Seascape 8" loading="lazy"></div>
         </div>
     </main>
 
