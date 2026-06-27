@@ -71,7 +71,7 @@
             <div class="internal-gallery-item"><img src="images/landscapes/AF5.jpg" alt="Landscape 3" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF8.jpg" alt="Landscape 4" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF9.jpg" alt="Landscape 5" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/AF18.jpg  alt="Landscape 6" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF18.jpg" alt="Landscape 6" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF19.jpg" alt="Landscape 7" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF21.jpg" alt="Landscape 8" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF22.jpg" alt="Landscape 9" loading="lazy"></div>
@@ -90,7 +90,7 @@
             <div class="internal-gallery-item"><img src="images/landscapes/AF41.jpg" alt="Landscape 22" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF42.jpg" alt="Landscape 23" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF43.jpg" alt="Landscape 24" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="images/landscapes/AF44.jpg  alt="Landscape 25" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/landscapes/AF44.jpg" alt="Landscape 25" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF45.jpg" alt="Landscape 26" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF46.jpg" alt="Landscape 27" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF48.jpg" alt="Landscape 28" loading="lazy"></div>
@@ -102,7 +102,7 @@
             <div class="internal-gallery-item"><img src="images/landscapes/AF87.jpg" alt="Landscape 34" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF88.jpg" alt="Landscape 35" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="images/landscapes/AF89.jpg" alt="Landscape 36" loading="lazy"></div>
-            </div>
+        </div>
     </main>
 
     <footer id="contatti">
