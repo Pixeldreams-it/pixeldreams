@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seascapes Gallery | Pixeldreams</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Stili specifici per la griglia interna delle foto */
+        .internal-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .internal-gallery-item {
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .internal-gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+            object-fit: cover;
+        }
+        .internal-gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        .back-btn {
+            display: inline-block;
+            margin: 30px 5%;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .back-btn:hover { background-color: #555; }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <header>
+        <div class="logo">Pixel<span>dreams</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#vision">Through the lens</a></li>
+                <li><a href="index.html#contatti">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <a href="index.html#portfolio" class="back-btn">&larr; Torna alle Gallerie</a>
+        
+        <div class="section-header" style="text-align: center; margin-bottom: 20px;">
+            <h2>Seascapes</h2>
+        </div>
+
+        <div class="internal-gallery-grid">
+            <div class="internal-gallery-item"><img src="images/seascapes/AF12.jpg" alt="Seascape 1" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF1.jpg" alt="Seascape 2" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF2.jpg" alt="Seascape 3" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF3.jpg" alt="Seascape 4" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF4.jpg" alt="Seascape 5" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF5.jpg" alt="Seascape 6" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF6.jpg" alt="Seascape 7" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="images/seascapes/AF7.jpg" alt="Seascape 8" loading="lazy"></div>
+        </div>
+    </main>
+
+    <footer id="contatti">
+        <div class="footer-container">
+            <h3>Contatti</h3>
+            <a href="mailto:info@studiofilipponi.com" class="email-link">info@studiofilipponi.com</a>
+            <div class="copyright">
+                <p>&copy; 2026 Pixeldreams. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // Mantiene la protezione del tasto destro anche per questa pagina dedicata
+      window.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG' || e.target.closest('.internal-gallery-item')) {
+          e.preventDefault();
+        }
+      }, true);
+    </script>
+</body>
+</html>
