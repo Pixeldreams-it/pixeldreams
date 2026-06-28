@@ -7,26 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* GRIGLIA 1: Struttura per le sole foto Orizzontali */
-        .grid-orizzontali {
+        /* Struttura originale identica a landscapes.html */
+        .internal-gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            padding: 20px 5% 0px 5%;
+            padding: 20px 5% 20px 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
-
-        /* GRIGLIA 2: Struttura separata per le sole foto Verticali */
-        .grid-verticali {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px 5% 40px 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
         .internal-gallery-item {
             overflow: hidden;
             border-radius: 4px;
@@ -54,6 +43,12 @@
             transition: background 0.3s;
         }
         .back-btn:hover { background-color: #555; }
+        
+        /* Spazio invisibile identico a landscapes.html */
+        .gallery-spacer {
+            height: 20px;
+            width: 100%;
+        }
     </style>
 </head>
 <body oncontextmenu="return false;">
@@ -76,9 +71,8 @@
             <h2>Seascapes</h2>
         </div>
 
-        <div class="grid-orizzontali">
+        <div class="internal-gallery-grid">
             <div class="internal-gallery-item"><img src="AF7.jpg" alt="Seascape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF10.jpg" alt="Seascape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF11.jpg" alt="Seascape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF12.jpg" alt="Seascape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF13.jpg" alt="Seascape" loading="lazy"></div>
@@ -93,9 +87,12 @@
             <div class="internal-gallery-item"><img src="AF76.jpg" alt="Seascape" loading="lazy"></div>
         </div>
 
-        <div class="grid-verticali">
+        <div class="gallery-spacer"></div>
+
+        <div class="internal-gallery-grid">
             <div class="internal-gallery-item"><img src="AF1.jpg" alt="Seascape Portrait" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF2.jpg" alt="Seascape Portrait" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="AF10.jpg" alt="Seascape Portrait" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF23.jpg" alt="Seascape Portrait" loading="lazy"></div>
         </div>
     </main>
