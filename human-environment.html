@@ -27,6 +27,7 @@
             overflow: hidden;
             border-radius: 4px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            cursor: pointer; /* Manina al passaggio del mouse */
         }
         .internal-gallery-item img {
             width: 100%;
@@ -56,7 +57,53 @@
         .gallery-spacer {
             height: 40px;
             width: 100%;
-            background-color: transparent; /* Mostra lo sfondo nero del sito */
+            background-color: transparent;
+        }
+
+        /* --- STILI LIGHTBOX (SCHERMO INTERO) --- */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .lightbox-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 4px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+            transform: scale(0.95);
+            transition: transform 0.4s ease;
+        }
+        .lightbox-overlay.active .lightbox-img {
+            transform: scale(1);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: 300;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.3s;
+        }
+        .lightbox-close:hover {
+            color: #ccc;
         }
     </style>
 </head>
@@ -76,7 +123,7 @@
     <main style="padding-top: 80px;">
         <a href="index.html#portfolio" class="back-btn">&larr; Torna alle Gallerie</a>
         
-        <div class="section-header" style="text-align: center; margin-bottom: 20px;">
+        <div class="section-header; margin-bottom: 20px;" style="text-align: center;">
             <h2>Human Environment</h2>
         </div>
 
@@ -112,6 +159,11 @@
         </div>
     </main>
 
+    <div class="lightbox-overlay" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="A schermo intero">
+    </div>
+
     <footer id="contatti">
         <div class="footer-container">
             <h3>Contatti</h3>
@@ -123,11 +175,35 @@
     </footer>
 
     <script>
+      // Blocco tasto destro sulle immagini e sul lightbox
       window.addEventListener('contextmenu', function (e) {
-        if (e.target.tagName === 'IMG' || e.target.closest('.internal-gallery-item')) {
+        if (e.target.tagName === 'IMG' || e.target.closest('.internal-gallery-item') || e.target.closest('.lightbox-overlay')) {
           e.preventDefault();
         }
       }, true);
+
+      // Logica per lo Schermo Intero (Lightbox)
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const galleryItems = document.querySelectorAll('.internal-gallery-grid .internal-gallery-item img');
+
+      galleryItems.forEach(img => {
+          img.addEventListener('click', () => {
+              lightboxImg.src = img.src;
+              lightbox.classList.add('active');
+          });
+      });
+
+      lightboxClose.addEventListener('click', () => {
+          lightbox.classList.remove('active');
+      });
+
+      lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) {
+              lightbox.classList.remove('active');
+          }
+      });
     </script>
 </body>
 </html>
