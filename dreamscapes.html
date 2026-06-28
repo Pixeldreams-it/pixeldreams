@@ -3,38 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreamscapes | Pixeldreams</title>
+    <title>Dreamscapes Gallery | Pixeldreams</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Stili aggiuntivi specifici per questa pagina */
+        /* Stili specifici per la griglia interna delle foto */
+        .internal-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .internal-gallery-item {
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .internal-gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+            object-fit: cover;
+        }
+        .internal-gallery-item img:hover {
+            transform: scale(1.05);
+        }
         .back-btn {
             display: inline-block;
-            margin: 40px 0 20px 0;
+            margin: 30px 5%;
+            padding: 10px 20px;
+            background-color: #333;
             color: #fff;
             text-decoration: none;
-            font-weight: 600;
-            border: 1px solid #fff;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
         }
-        .back-btn:hover {
-            background: #fff;
-            color: #000;
-        }
-        .dreamscapes-header {
-            text-align: center;
-            padding: 20px 20px 40px 20px;
-        }
-        .dreamscapes-header h1 {
-            font-size: 2.5rem;
-            margin-top: 15px;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
+        .back-btn:hover { background-color: #555; }
     </style>
 </head>
-<body oncontextmenu="return false;" style="background-color: #0c0c0c; color: #fff;">
+<body oncontextmenu="return false;">
 
     <header>
         <div class="logo">Pixel<span>dreams</span></div>
@@ -47,28 +58,22 @@
         </nav>
     </header>
 
-    <main class="gallery-section" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; min-height: 70vh;">
-        <div class="dreamscapes-header">
-            <a href="index.html#portfolio" class="back-btn">&larr; Torna alle Gallerie</a>
-            <h1>Dreamscapes</h1>
-        </div>
+    <main style="padding-top: 80px;">
+        <a href="index.html#portfolio" class="back-btn">&larr; Torna alle Gallerie</a>
         
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="foto-dreamscape-1.jpg" alt="Dreamscape 1">
-            </div>
-            <div class="gallery-item">
-                <img src="foto-dreamscape-2.jpg" alt="Dreamscape 2">
-            </div>
-            <div class="gallery-item">
-                <img src="foto-dreamscape-3.jpg" alt="Dreamscape 3">
-            </div>
-            <div class="gallery-item">
-                <img src="foto-dreamscape-4.jpg" alt="Dreamscape 4">
-            </div>
-            <div class="gallery-item">
-                <img src="foto-dreamscape-5.jpg" alt="Dreamscape 5">
-            </div>
+        <div class="section-header" style="text-align: center; margin-bottom: 20px;">
+            <h2>Dreamscapes</h2>
+        </div>
+
+        <div class="internal-gallery-grid">
+            <div class="internal-gallery-item"><img src="Dreamscapes/AF1.jpg" alt="Dreamscape 1" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="Dreamscapes/AF2.jpg" alt="Dreamscape 2" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="Dreamscapes/AF3.jpg" alt="Dreamscape 3" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="Dreamscapes/AF4.jpg" alt="Dreamscape 4" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="Dreamscapes/AF5.jpg" alt="Dreamscape 5" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="Dreamscapes/AF6.jpg" alt="Dreamscape 6" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="Dreamscapes/AF7.jpg" alt="Dreamscape 7" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="Dreamscapes/AF8.jpg" alt="Dreamscape 8" loading="lazy"></div>
         </div>
     </main>
 
@@ -83,9 +88,8 @@
     </footer>
 
     <script>
-      // Mantiene protette dal click destro anche le immagini dentro questa galleria
       window.addEventListener('contextmenu', function (e) {
-        if (e.target.tagName === 'IMG' || e.target.closest('.gallery-item')) {
+        if (e.target.tagName === 'IMG' || e.target.closest('.internal-gallery-item')) {
           e.preventDefault();
         }
       }, true);
