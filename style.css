@@ -30,7 +30,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header configurazione iniziale */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -76,12 +76,12 @@ header nav ul li a:hover {
     color: var(--text-main) !important;
 }
 
-/* Hero Section configurazione iniziale */
+/* Hero Section: Forzata a coprire tutto, ancorata in alto a sinistra */
 .hero {
-    background: url('AF7 copia.jpg') no-repeat center top; 
-    background-size: contain; 
+    background: url('AF7 copia.jpg') no-repeat top center; 
+    background-size: cover; /* Riempie tutto lo spazio disponibile */
     background-color: #000; 
-    height: 85vh;
+    height: 90vh; /* Leggermente più alta per mostrare più immagine */
     display: flex;
     justify-content: center;
     align-items: center;
