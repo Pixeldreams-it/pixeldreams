@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Forza esattamente il layout a 3 colonne */
         .internal-gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             padding: 40px 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
+        
+        /* Gestione per schermi piccoli/smartphone (passa a colonna singola) */
+        @media (max-width: 768px) {
+            .internal-gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .internal-gallery-item {
             overflow: hidden;
             border-radius: 4px;
