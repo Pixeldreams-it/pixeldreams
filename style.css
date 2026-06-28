@@ -46,13 +46,13 @@ header {
 
 header .logo {
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 700; /* Tutto il logo in grassetto */
     letter-spacing: -0.5px;
 }
 
 header .logo span {
     color: red;
-    font-weight: 700;
+    font-weight: 700; /* Parte rossa ripristinata in grassetto */
 }
 
 header nav ul {
@@ -69,7 +69,7 @@ header nav ul li a {
     text-decoration: none;
     color: var(--text-muted) !important;
     font-weight: 400 !important;
-    font-size: 0.95rem !important;
+    font-size: 0.95rem !important; /* Ripristinata dimensione originale corretta */
     transition: color 0.3s ease;
 }
 
@@ -77,22 +77,52 @@ header nav ul li a:hover {
     color: var(--text-main) !important;
 }
 
-/* Hero Section: GESTIONE IMMAGINE INTERA */
+/* Hero Section (Copertina) */
 .hero {
-    width: 100%;
+    background: url('AF7 copia.jpg') center 20%; 
+    background-size: 100% auto; 
+    background-repeat: no-repeat;
+    background-color: #000; 
+    height: 85vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: #0b0b0b;
+    text-align: center;
+    pointer-events: none;
 }
 
-.hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    /* Assicura che l'immagine non venga mai tagliata */
-    object-fit: contain;
-    pointer-events: none;
+.hero h1 {
+    font-family: 'Lyon Corsivo', Georgia, serif !important; 
+    font-style: normal !important;
+    font-size: 3.5rem;
+    font-weight: 25 !important;
+    letter-spacing: 10px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: white;
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: var(--text-main);
+    border: 2px solid var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.btn-cta:hover {
+    background-color: var(--text-main);
+    color: var(--bg-color);
 }
 
 /* Sezione Portfolio */
@@ -110,6 +140,11 @@ header nav ul li a:hover {
     margin-bottom: 10px;
 }
 
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* Griglia Gallerie: Forza la disposizione 2 sopra e 2 sotto su Desktop */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -122,7 +157,6 @@ header nav ul li a:hover {
     border-radius: 8px;
     background-color: var(--card-bg);
     aspect-ratio: 3 / 2;
-    cursor: pointer;
 }
 
 .gallery-item img {
@@ -136,15 +170,55 @@ header nav ul li a:hover {
     transform: scale(1.05);
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    border-bottom: none !important;
+}
+
 /* Protezione Immagini globale */
 img {
     max-width: 100%;
+    height: auto;
     user-select: none;
     -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
-/* Stili Testi Finali e Footer (Mantenuti come da tua richiesta) */
-.vision-section, .vision-content, footer, body > div:last-of-type, body > section:last-of-type {
+/* ======================================================= */
+/* OTTIMIZZAZIONE E ELEGANZA BLOCCHI FINALI (TESTI E MARGINI) */
+/* ======================================================= */
+
+/* Margini, spaziatura e centratura geometrica selettiva (SOLO per le sezioni finali) */
+.vision-section,
+.vision-content,
+footer,
+body > div:last-of-type,
+body > section:last-of-type {
     padding: 120px 8% 80px 8% !important;
     text-align: center !important;
     display: flex !important;
@@ -153,27 +227,188 @@ img {
     justify-content: center !important;
 }
 
-h1, h2, h3, h4, h5, h6, p, .text, .vision-section h2, .vision-content h2, footer h3, body > div:last-child h2 {
+/* Forza la centratura dei testi interni evitando i selettori universali sull'header */
+.vision-section p, .vision-section h2,
+.vision-content p, .vision-content h2,
+footer h3, footer p, footer a,
+body > div:last-of-type h2, body > div:last-of-type p, body > div:last-of-type a,
+body > section:last-of-type h2, body > section:last-of-type p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Applicazione Font Lyon Elegante alle sole scritte finali e titoli */
+h1, h2, h3, h4, h5, h6, p, .text, 
+.vision-section h2, .vision-section p,
+.vision-content h2, .vision-content p,
+footer h3, footer p,
+body > div:last-child h2, body > div:last-child p {
     font-family: 'Lyon', serif !important;
 }
 
-footer a, .email-link {
-    color: #ffffff !important;
-    font-size: 1.6rem !important;
-    text-decoration: none !important;
-    margin-top: 15px !important;
-}
-
-.copyright {
-    margin-top: 100px !important;
-    font-size: 0.9rem !important;
-    color: #444 !important;
+/* Isolamento totale Header (Blocco di sicurezza per font e dimensioni) */
+header, header *, header .logo, header .logo span, header nav ul li a {
     font-family: 'Inter', sans-serif !important;
 }
 
-/* Responsive */
+.hero .btn, .hero a, .hero button, .hero-content a {
+    font-family: 'Lyon', serif !important;
+    text-transform: none;
+    font-size: 1.2rem !important;
+    padding: 12px 30px !important;
+}
+
+/* Titoli delle sezioni finali ("Through the lens" e "Contatti") */
+body > div:last-child h2, footer h3, .vision-content h2, body > section:last-of-type h2 {
+    font-size: 3rem !important; 
+    letter-spacing: 1px;
+    margin-bottom: 40px !important; 
+    font-weight: normal !important;
+    width: 100%;
+}
+
+/* Paragrafi descrittivi (Il testo della filosofia/visione) */
+body > div:last-child p, footer p, .vision-content p, body > section:last-of-type p {
+    max-width: 750px; 
+    color: var(--text-muted) !important;
+    font-size: 1.3rem !important; 
+    line-height: 1.9 !important; 
+    margin-bottom: 40px !important;
+}
+
+/* RIPRISTINO LINK E EMAIL: Forzati eleganti, bianchi, e centrati a fondo pagina */
+footer a, .vision-section a, .email-link, body > div:last-of-type a {
+    color: #ffffff !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+    transition: opacity 0.3s ease;
+    font-size: 1.6rem !important; 
+    letter-spacing: 0.5px;
+    margin-top: 15px !important;
+    display: inline-block !important;
+    text-align: center !important;
+    font-family: 'Lyon', serif !important;
+}
+
+footer a:hover, .vision-section a:hover, .email-link:hover, body > div:last-of-type a:hover {
+    opacity: 0.8 !important;
+    color: #ffffff !important;
+}
+
+/* Testo del Copyright a fondo pagina */
+.copyright {
+    margin-top: 100px !important; 
+    font-size: 0.9rem !important;
+    color: #444 !important;
+    font-family: 'Inter', sans-serif !important; 
+    letter-spacing: 0.5px;
+    width: 100%;
+}
+
+/* ======================================================= */
+/* BLOCCO RESPONSIVE UNIFICATO E OTTIMIZZATO PER SMARTPHONE */
+/* ======================================================= */
 @media (max-width: 500px) {
-    header { flex-direction: column !important; padding: 10px 5% !important; }
-    .gallery-grid { grid-template-columns: 1fr !important; }
-    .hero-image { height: auto; }
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* Header a colonna ultra-compatto per Smartphone */
+    header {
+        flex-direction: column !important;
+        padding: 10px 5% !important; 
+        gap: 4px !important;       
+        height: auto !important;
+        position: relative !important; 
+        width: 100% !important;
+        display: flex !important;
+        text-align: center !important;
+    }
+    header .logo {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 1.7rem !important; 
+        margin-bottom: 0px !important;
+    }
+    header nav {
+        width: 100% !important;
+    }
+    header nav ul {
+        display: flex !important;
+        flex-direction: column !important; 
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+        gap: 2px !important; 
+    }
+    header nav ul li {
+        margin: 0 !important; 
+        padding: 2px 0 !important; 
+        width: 100% !important;
+    }
+    header nav ul li a {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 14px !important; 
+        font-weight: 500 !important;
+        color: var(--text-muted) !important; 
+        display: inline-block !important;
+        padding: 2px 10px !important; 
+        letter-spacing: 1px !important;
+    }
+    
+    header nav ul li a:active, header nav ul li a:hover {
+        color: var(--text-main) !important;
+    }
+
+    /* Copertina iniziale fluida su mobile */
+    .hero {
+        height: 60vh !important;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+    .hero h1 {
+        font-size: 2rem !important;
+        letter-spacing: 3px !important;
+        line-height: 1.2 !important;
+    }
+    .hero p {
+        font-size: 1.1rem !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Griglia foto a colonna singola su smartphone */
+    .gallery-section {
+        padding: 40px 5% !important;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .gallery-item {
+        width: 100% !important;
+        aspect-ratio: 3 / 2 !important;
+    }
+
+    /* Adattamento dei testi finali su Mobile */
+    body > div:last-child, footer, .vision-section {
+        padding: 50px 5% !important;
+    }
+    body > div:last-child h2, footer h3, .vision-content h2 {
+        font-size: 2rem !important;
+        margin-bottom: 20px !important;
+    }
+    body > div:last-child p, footer p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+    .email-link, footer a {
+        font-size: 1.2rem !important;
+    }
 }
