@@ -12,7 +12,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            padding: 20px 5% 40px 5%;
+            padding: 20px 5% 20px 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -44,18 +44,10 @@
         }
         .back-btn:hover { background-color: #555; }
         
-        /* Titoli delle sotto-sezioni per l'ordine visivo */
-        .gallery-subtitle {
-            text-align: left;
-            padding: 0 5%;
-            max-width: 1400px;
-            margin: 40px auto 10px auto;
-            font-size: 1.2rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
+        /* Spaziatore invisibile tra i due blocchi di foto */
+        .gallery-spacer {
+            height: 20px;
+            width: 100%;
         }
     </style>
 </head>
@@ -79,7 +71,6 @@
             <h2>Landscapes</h2>
         </div>
 
-        <div class="gallery-subtitle">Orizzontali</div>
         <div class="internal-gallery-grid">
             <div class="internal-gallery-item"><img src="AF34.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF26.jpg" alt="Landscape" loading="lazy"></div>
@@ -113,7 +104,8 @@
             <div class="internal-gallery-item"><img src="AF39.jpg" alt="Landscape" loading="lazy"></div>
         </div>
 
-        <div class="gallery-subtitle">Verticali</div>
+        <div class="gallery-spacer"></div>
+
         <div class="internal-gallery-grid">
             <div class="internal-gallery-item"><img src="AF90.jpg" alt="Landscape Portrait" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF86.jpg" alt="Landscape Portrait" loading="lazy"></div>
