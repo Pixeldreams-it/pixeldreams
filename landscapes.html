@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Stili della griglia delle foto */
+        /* Griglia principale */
         .internal-gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            padding: 40px 5%;
+            padding: 20px 5% 40px 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -33,7 +33,7 @@
         }
         .back-btn {
             display: inline-block;
-            margin: 30px 5%;
+            margin: 30px 5% 10px 5%;
             padding: 10px 20px;
             background-color: #333;
             color: #fff;
@@ -43,6 +43,20 @@
             transition: background 0.3s;
         }
         .back-btn:hover { background-color: #555; }
+        
+        /* Titoli delle sotto-sezioni per l'ordine visivo */
+        .gallery-subtitle {
+            text-align: left;
+            padding: 0 5%;
+            max-width: 1400px;
+            margin: 40px auto 10px auto;
+            font-size: 1.2rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body oncontextmenu="return false;">
@@ -65,71 +79,8 @@
             <h2>Landscapes</h2>
         </div>
 
+        <div class="gallery-subtitle">Orizzontali</div>
         <div class="internal-gallery-grid">
-            <div class="internal-gallery-item"><img src="AF34.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF26.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF4.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF7.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AES.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AFS.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF5.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF10.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF13.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF38.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF25.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF24.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF17.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF19.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF23.jpg" alt="Landscape" loading="lazy"></div>
-
-            <div class="internal-gallery-item"><img src="AF90.jpg" alt="Landscape Portrait" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF86.jpg" alt="Landscape Portrait" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF97.jpg" alt="Landscape Portrait" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF5.jpg" alt="Landscape Portrait" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AFS.jpg" alt="Landscape Portrait" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AFS4.jpg" alt="Landscape Portrait" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AFST.jpg" alt="Landscape Portrait" loading="lazy"></div>
-        </div>
-    </main>
-
-    <footer id="contatti">
-        <div class="footer-container">
-            <h3>Contatti</h3>
-            <a href="mailto:info@studiofilipponi.com" class="email-link">info@studiofilipponi.com</a>
-            <div class="copyright">
-                <p>&copy; 2026 Pixeldreams. Tutti i diritti riservati.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-      window.addEventListener('contextmenu', function (e) {
-        if (e.target.tagName === 'IMG' || e.target.closest('.internal-gallery-item')) {
-          e.preventDefault();
-        }
-      }, true);
-    </script>
-</body>
-</html>
-        <div class="logo">Pixel<span>dreams</span></div>
-        <nav>
-            <ul>
-                <li><a href="index.html#portfolio">Portfolio</a></li>
-                <li><a href="index.html#vision">Through the lens</a></li>
-                <li><a href="index.html#contatti">Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main style="padding-top: 80px;">
-        <a href="index.html#portfolio" class="back-btn">&larr; Torna alle Gallerie</a>
-        
-        <div class="section-header" style="text-align: center; margin-bottom: 20px;">
-            <h2>Landscapes</h2>
-        </div>
-
-        <div class="internal-gallery-grid">
-            <!-- Riga 1 dello screenshot -->
             <div class="internal-gallery-item"><img src="AF34.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF26.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF4.jpg" alt="Landscape" loading="lazy"></div>
@@ -141,11 +92,7 @@
             <div class="internal-gallery-item"><img src="AF36.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF28.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF88.jpg" alt="Landscape" loading="lazy"></div>
-
-            <!-- Riga 2 dello screenshot -->
             <div class="internal-gallery-item"><img src="AF48.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF90.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF86.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF29.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF87.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF22.jpg" alt="Landscape" loading="lazy"></div>
@@ -154,24 +101,26 @@
             <div class="internal-gallery-item"><img src="AF3.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF51.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF37.jpg" alt="Landscape" loading="lazy"></div>
-
-            <!-- Riga 3 dello screenshot -->
-            <div class="internal-gallery-item"><img src="AF9.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF21.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF5.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF8.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF66.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF41.jpg" alt="Landscape" loading="lazy"></div>
-            <div class="internal-gallery-item"><img src="AF45.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF44.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF42.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF43.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF38.jpg" alt="Landscape" loading="lazy"></div>
-
-            <!-- Riga 4 dello screenshot -->
             <div class="internal-gallery-item"><img src="AF40.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF46.jpg" alt="Landscape" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF39.jpg" alt="Landscape" loading="lazy"></div>
+        </div>
+
+        <div class="gallery-subtitle">Verticali</div>
+        <div class="internal-gallery-grid">
+            <div class="internal-gallery-item"><img src="AF90.jpg" alt="Landscape Portrait" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="AF86.jpg" alt="Landscape Portrait" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="AF9.jpg" alt="Landscape Portrait" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="AF5.jpg" alt="Landscape Portrait" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="AF66.jpg" alt="Landscape Portrait" loading="lazy"></div>
+            <div class="internal-gallery-item"><img src="AF45.jpg" alt="Landscape Portrait" loading="lazy"></div>
         </div>
     </main>
 
