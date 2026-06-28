@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Griglia principale identica a landscapes */
+        /* Griglia principale fissa a 3 colonne */
         .internal-gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            padding: 20px 5% 20px 5%;
+            padding: 20px 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -38,6 +38,7 @@
         .internal-gallery-item img:hover {
             transform: scale(1.05);
         }
+        
         .back-btn {
             display: inline-block;
             margin: 30px 5% 10px 5%;
@@ -51,10 +52,11 @@
         }
         .back-btn:hover { background-color: #555; }
         
-        /* Spazio di separazione nero identico a landscapes.html */
+        /* Divisore per creare la sezione nera di distacco */
         .gallery-spacer {
             height: 40px;
             width: 100%;
+            background-color: transparent; /* Mostra lo sfondo nero del sito */
         }
     </style>
 </head>
@@ -78,7 +80,7 @@
             <h2>Human Environment</h2>
         </div>
 
-        <div class="internal-gallery-grid">
+        <div class="internal-gallery-grid" style="margin-bottom: 20px;">
             <div class="internal-gallery-item"><img src="AF15.jpg" alt="Human Environment" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF16.jpg" alt="Human Environment" loading="lazy"></div>
             <div class="internal-gallery-item"><img src="AF20.jpg" alt="Human Environment" loading="lazy"></div>
