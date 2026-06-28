@@ -36,14 +36,14 @@ header nav ul { display: flex; list-style: none; }
 header nav ul li { margin-left: 30px; }
 header nav ul li a { font-family: 'Inter', sans-serif !important; text-decoration: none; color: var(--text-muted) !important; font-size: 0.95rem !important; }
 
-/* Hero: Qui forziamo l'immagine a stare tutta dentro (contain) 
-   e ancorata in alto. Non verrà tagliata. */
+/* Hero: Posizionamento regolabile verso l'alto */
 .hero {
     width: 100%;
     height: 85vh;
     background-image: url('AF7 copia.jpg');
     background-repeat: no-repeat;
-    background-position: center top;
+    /* Regola il valore -30px se vuoi l'immagine più in alto o più in basso */
+    background-position: center -30px; 
     background-size: contain; 
     background-color: #000;
     display: flex;
@@ -53,7 +53,7 @@ header nav ul li a { font-family: 'Inter', sans-serif !important; text-decoratio
     pointer-events: none;
 }
 
-/* Resto dello stile invariato */
+/* Resto della pagina */
 .gallery-section { padding: 100px 8%; }
 .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
 .gallery-item { position: relative; overflow: hidden; border-radius: 8px; background-color: var(--card-bg); aspect-ratio: 3 / 2; }
@@ -61,7 +61,10 @@ header nav ul li a { font-family: 'Inter', sans-serif !important; text-decoratio
 
 img { max-width: 100%; user-select: none; -webkit-user-drag: none; }
 
-footer { padding: 120px 8% 80px 8% !important; text-align: center !important; }
+.vision-section, .vision-content, footer {
+    padding: 120px 8% 80px 8% !important;
+    text-align: center !important;
+}
 
 @media (max-width: 500px) {
     header { height: auto !important; padding: 10px 5% !important; }
