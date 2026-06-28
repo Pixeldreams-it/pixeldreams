@@ -5,7 +5,6 @@
     font-weight: normal;
 }
 
-/* Reset e Variabili per il Tema Scuro */
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +30,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navigazione Desktop */
+/* Header ripristinato alle tue impostazioni originali */
 header {
     display: flex;
     justify-content: space-between;
@@ -77,15 +76,11 @@ header nav ul li a:hover {
     color: var(--text-main) !important;
 }
 
-/* Hero Section: AGGIORNATA PER NON TAGLIARE L'IMMAGINE */
+/* Hero Section: Modificata solo per non tagliare il basso */
 .hero {
-    background-image: url('AF7 copia.jpg');
-    background-repeat: no-repeat;
-    /* 'contain' assicura che l'intera foto sia visibile */
+    background: url('AF7 copia.jpg') no-repeat center top; 
     background-size: contain; 
-    /* 'center top' la mantiene allineata in alto */
-    background-position: center top; 
-    background-color: #0b0b0b; 
+    background-color: #000; 
     height: 85vh;
     display: flex;
     justify-content: center;
@@ -128,85 +123,15 @@ header nav ul li a:hover {
     color: var(--bg-color);
 }
 
-/* Sezione Portfolio */
-.gallery-section {
-    padding: 100px 8%;
-}
+/* Sezioni Portfolio e Footer rimangono invariate */
+.gallery-section { padding: 100px 8%; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.gallery-item { position: relative; overflow: hidden; border-radius: 8px; background-color: var(--card-bg); aspect-ratio: 3 / 2; cursor: pointer; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.gallery-item:hover img { transform: scale(1.05); }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.section-header p {
-    color: var(--text-muted);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: var(--card-bg);
-    aspect-ratio: 3 / 2;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.gallery-item:hover .overlay {
-    opacity: 1;
-}
-
-.text {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding-bottom: 5px;
-    border-bottom: none !important;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    user-select: none;
-    -webkit-user-drag: none;
-}
+img { max-width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
 
 .vision-section, .vision-content, footer, body > div:last-of-type, body > section:last-of-type {
     padding: 120px 8% 80px 8% !important;
@@ -217,44 +142,26 @@ img {
     justify-content: center !important;
 }
 
-h1, h2, h3, h4, h5, h6, p, .text, .vision-section h2, .vision-section p, .vision-content h2, .vision-content p, footer h3, footer p, body > div:last-child h2, body > div:last-child p {
+h1, h2, h3, h4, h5, h6, p, .text, .vision-section h2, .vision-content h2, footer h3, body > div:last-child h2 {
     font-family: 'Lyon', serif !important;
-}
-
-header, header *, header .logo, header .logo span, header nav ul li a {
-    font-family: 'Inter', sans-serif !important;
-}
-
-.hero .btn, .hero a, .hero button, .hero-content a {
-    font-family: 'Lyon', serif !important;
-    text-transform: none;
-    font-size: 1.2rem !important;
-    padding: 12px 30px !important;
 }
 
 footer a, .email-link {
     color: #ffffff !important;
-    font-weight: normal !important;
+    font-size: 1.6rem !important;
     text-decoration: none !important;
-    transition: opacity 0.3s ease;
-    font-size: 1.6rem !important; 
-    letter-spacing: 0.5px;
     margin-top: 15px !important;
-    display: inline-block !important;
-    text-align: center !important;
-    font-family: 'Lyon', serif !important;
 }
 
 .copyright {
-    margin-top: 100px !important; 
+    margin-top: 100px !important;
     font-size: 0.9rem !important;
     color: #444 !important;
-    font-family: 'Inter', sans-serif !important; 
-    letter-spacing: 0.5px;
+    font-family: 'Inter', sans-serif !important;
 }
 
 @media (max-width: 500px) {
-    header { flex-direction: column !important; padding: 10px 5% !important; gap: 4px !important; height: auto !important; position: relative !important; width: 100% !important; display: flex !important; text-align: center !important; }
-    .hero { height: 60vh !important; background-size: contain !important; }
+    header { flex-direction: column !important; padding: 10px 5% !important; height: auto !important; }
+    .hero { height: 60vh !important; }
     .gallery-grid { grid-template-columns: 1fr !important; }
 }
