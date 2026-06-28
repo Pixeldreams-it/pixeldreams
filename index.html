@@ -5,43 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixeldreams | Landscape and Nature Photography</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body oncontextmenu="return false;">
 
     <header>
         <div class="logo">Pixel<span>dreams</span></div>
         <nav>
             <ul>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#lens">Through the lens</a></li>
-                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#vision">Through the lens</a></li>
+                <li><a href="#contatti">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <img src="AF7 copia.jpg" alt="Pixeldreams" class="hero-image">
+        <div class="hero-content">
+            <h1>Pixeldreams</h1>
+            <p>Landscape and Nature Photography</p>
+            <a href="#portfolio" class="btn-cta">Explore</a>
+        </div>
     </section>
 
     <section id="portfolio" class="gallery-section">
         <div class="section-header">
-            <h2>Portfolio</h2>
+            <h2>Galleries</h2>
         </div>
+        
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="immagine1.jpg" alt="Foto 1">
-            </div>
-            <div class="gallery-item">
-                <img src="immagine2.jpg" alt="Foto 2">
-            </div>
+            <a href="landscapes.html" id="landscapes" class="gallery-item" style="text-decoration: none; display: block;">
+                <img src="AF83 copia.jpg" alt="Montagna">
+                <div class="overlay">
+                    <div class="text">Landscapes</div>
+                </div>
+            </a>
+
+            <a href="seascapes.html" id="seascapes" class="gallery-item" style="text-decoration: none; display: block;">
+                <img src="AF12 copia.jpg" alt="Mare">
+                <div class="overlay">
+                    <div class="text">Seascapes</div>
+                </div>
+            </a>
+
+            <a href="dreamscapes.html" id="dreamscapes" class="gallery-item" style="text-decoration: none; display: block;">
+                <img src="AF6 copia.jpg" alt="Astratto">
+                <div class="overlay">
+                    <div class="text">Dreamscapes</div>
+                </div>
+            </a>
+
+            <a href="human-environment.html" id="human-environment" class="gallery-item" style="text-decoration: none; display: block;">
+                <img src="AF72 copia.jpg" alt="Garda">
+                <div class="overlay">
+                    <div class="text">Human Environment</div>
+                </div>
+            </a>
         </div>
     </section>
 
-    <footer id="contacts">
-        <h3>Contattami</h3>
-        <a href="mailto:email@esempio.com" class="email-link">email@esempio.com</a>
-        <p class="copyright">&copy; 2026 Pixeldreams</p>
+    <section id="vision" class="vision-section">
+        <div class="vision-content">
+            <h2>Through the lens</h2>
+            <p>Fotografare la natura non significa solo premere il pulsante di scatto. Significa saper attendere ore nel freddo, rispettare gli habitat protetti e catturar quel singolo istante in cui la terra racconta la sua storia. Ogni pixel è un sogno di conservazione e meraviglia. La fotografia mi ha fatto capire quanto meravigliosa sia la natura e quanto siamo costantemente circondati da essa.
+Da allora, quando mi guardo intorno ed osservo, la vedo in tutta la sua perfetta affermazione.
+Da allora, quando è possibile, cerco di immortalarla nei miei scatti al meglio delle mie capacità, che non sono mai al suo livello e ciò mi spinge a migliorare ancora ... Che il viaggio abbia inizio ...</p>
+        </div>
+    </section>
+
+    <footer id="contatti">
+        <div class="footer-container">
+            <h3>Contatti</h3>
+            <a href="mailto:info@studiofilipponi.com" class="email-link">info@studiofilipponi.com</a>
+            <div class="copyright">
+                <p>&copy; 2026 Pixeldreams. Tutti i diritti riservati.</p>
+            </div>
+        </div>
     </footer>
 
+    <script>
+      // Blocca il click destro su tutto ciò che riguarda le gallerie (immagini e scritte overlay comprese)
+      window.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG' || e.target.closest('.gallery-item')) {
+          e.preventDefault();
+        }
+      }, true);
+    </script>
 </body>
 </html>
